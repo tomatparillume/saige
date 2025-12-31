@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
  * @author tmargolis
  * @author tom@parillume.com
  */
-public class BarGraphRankerTest {
+public class BarGraphComparatorTest {
     @Test
     public void testRanking()
     throws Exception {  
