@@ -58,7 +58,7 @@ public class BarGraphWriter {
         for(BarGraphData thisData: data) {
             write(thisData, barWidthToSortNum);
         }
-        //TJMTJM Check in; put jar file in Google Drive
+        
         return barWidthToSortNum.values()
                                 .stream()
                                 .mapToInt(Integer::intValue)  // Convert Integer to int
@@ -111,7 +111,7 @@ public class BarGraphWriter {
             barWidthToSortNum.put(barWidth, ++sortNum);
             
             ImageIO.write(image, "png", new File(FileUtil.TMP_DIR, 
-                                                 barWidth + "_" + sortNum + "_" + data.getBarFileName() + ".png")); 
+                                                 barWidth + "_" + sortNum + "_" + data.getBarFileName() + FileUtil.FileType.PNG.getExtension())); 
         }
         
         return data.getBarWidths().length;

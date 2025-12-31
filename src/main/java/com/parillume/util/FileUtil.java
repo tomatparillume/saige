@@ -24,7 +24,20 @@ import java.util.stream.Collectors;
  * @author tmargolis
  * @author tom@parillume.com
  */
-public class FileUtil {
+public class FileUtil {    
+    public enum FileType {
+        PDF(".pdf"),
+        PNG(".png");
+        
+        private String extension;
+        private FileType(String extension) {
+            this.extension = extension;
+        }
+        public String getExtension() {
+            return extension;
+        }
+    }
+    
     public static final File RESOURCES_DIR = new File(new File("."), "src/main/resources");
     public static final File FONTS_DIR = RESOURCES_DIR;
     public static final File IMAGES_DIR = new File(RESOURCES_DIR, "images");

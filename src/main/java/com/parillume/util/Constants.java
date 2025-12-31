@@ -11,7 +11,8 @@ import java.util.Random;
  * @author tmargolis
  * @author tom@parillume.com
  */
-public class Constants {    
+public class Constants {
+    
     public static final Random RANDOM = new Random();
     
     public static final String PLUME_COMPANY_ID = "plume-company";
