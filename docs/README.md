@@ -44,7 +44,7 @@ Sections in this README.md:
     1.) Look in the [base]/tmp/ directory; there may be an errors.txt file to pay attention to.
     2.) Inspect the generated PDFs in the [base]/tmp/ directory: Look for names that are too long, logo position, text overflow...
 
-****** ONE-SHEET PDF-to-PNG PROGRAM ******
+****** PDF-to-PNG PROGRAM ******
 To convert one-sheets to PNGs, so you can insert them in PowerPoints:
 
         Put the PNGs that you want to convert in the [base]/tmp/ directory.
