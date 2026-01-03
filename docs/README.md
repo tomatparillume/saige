@@ -4,12 +4,16 @@ This is the README file for the SAIGE Java project, available through github.com
     password: -_%(]
 
 Sections in this README.md:
+- PREPARATION
 - COMMAND-LINE PROGRAMS
 - WEB APPLICATION IN A BROWSER
 - HTTPS SECURITY
 
-=========== COMMAND-LINE PROGRAMS ==============================================
-****** BEFORE USING COMMAND-LINE PROGRAMS ******
+=========== PREPARATION ========================================================
+    (1)
+    You must have Java installed on your machine.
+
+    (2)
     You will need parillume-0.0.1-SNAPSHOT-jar-with-dependencies.jar.
     If you don't know how to generate this *.jar file using Java: 
         - In Google Drive > Parillume Software > SAIGE > SAIGE Program Resources, download the *.jar.
@@ -17,6 +21,7 @@ Sections in this README.md:
     Create a base directory on your machine - e.g. Documents/Parillume/SomeDir. We'll call this the [base] directory.
     Put the *.jar file in a [base]/target directory - e.g. Documents/Parillume/SomeDir/target.
 
+=========== COMMAND-LINE PROGRAMS ==============================================
 ****** SHEET-CREATION PROGRAM ******	
     ****** PREPARATION ******
     Create your employee spreadsheets by copying and editing WorksheetTemplate.xlsx (found in src/main/resources)
@@ -77,16 +82,12 @@ To convert one-sheets to PNGs, so you can insert them in PowerPoints:
     2.) Drag the generated bar graph images into your survey PowerPoint.
 
 =========== WEB APPLICATION IN A BROWSER =======================================
-Download the project from github.com onto your machine:
-    - On your machine, on a command line, execute: git clone https://github.com/tomatparillume/saige.git
-    - This will download the github project into a saige/ directory
-
 The application must have access to a MySQL DB; see the spring.datasource.* parameters in saige/src/main/resources/application.properties file.
 
 To start the application: 
-    In a terminal (command window), inside the saige/ directory, type:  mvn spring-boot:run
-        ('mvn' runs a maven command; if you don't have maven installed, get help to install it!)
-
+    (1) Install Maven
+    (2) On a command line, inside the saige/ directory, type:  mvn spring-boot:run
+        
     OR
 
     In a Java IDE (e.g. NetBeans), run the ParillumeApplication.java class
