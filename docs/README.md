@@ -11,14 +11,15 @@ Sections in this README.md:
 =========== COMMAND-LINE PROGRAMS ==============================================
 ****** BEFORE USING COMMAND-LINE PROGRAMS ******
     You will need parillume-0.0.1-SNAPSHOT-jar-with-dependencies.jar.
-    If you don't know how to generate this *.jar file using Java: In Google Drive > Parillume Software > SAIGE > SAIGE Program Resources, download the *.jar.
+    If you don't know how to generate this *.jar file using Java: 
+        - In Google Drive > Parillume Software > SAIGE > SAIGE Program Resources, download the *.jar.
 
     Create a base directory on your machine - e.g. Documents/Parillume/SomeDir. We'll call this the [base] directory.
     Put the *.jar file in a [base]/target directory - e.g. Documents/Parillume/SomeDir/target.
 
 ****** SHEET-CREATION PROGRAM ******	
     ****** PREPARATION ******
-    Create your employee spreadsheets by copying and editing WorksheetTemplate.xlsx
+    Create your employee spreadsheets by copying and editing WorksheetTemplate.xlsx (found in src/main/resources)
     Put these spreadsheets in a [base]/tmp directory - e.g. Documents/Parillume/SomeDir/tmp.
     If you are making team charts, put the client logo (and name it "client_logo.png") in this [base]/tmp directory.
 	
@@ -60,7 +61,7 @@ To convert one-sheets to PNGs, so you can insert them in PowerPoints:
 
 ****** SURVEY BAR GRAPH CREATION PROGRAM ******
     ****** PREPARATION ******
-    The template_survey_bargraph.xlsx template is intended to generate bar graphs that can be inserted into a survey PowerPoint. 
+    The template_survey_bargraph.xlsx template (found in src/main/resources) is intended to generate bar graphs that can be inserted into a survey PowerPoint. 
     
     Copy this template into your [base]/tmp directory - e.g. Documents/Parillume/SomeDir/tmp
     Adjust the row values in this copied template to match the survey results.
@@ -94,7 +95,7 @@ To view the UI in a browser:
     Browse to https://localhost:8443/
     In the resulting login screen, enter info@parillume.com / _ (Lisa's standard password)
         * NOTE that these credentials depend on database entries, and may change
-        * You can also add these credentials to the database by calling the /seedParillume endpoint 
+        * You can add these credentials to the database by calling the /seedParillume endpoint 
 
 To call endpoints:
     The URL for the browser UI, and for all endpoints, is https://localhost:8443 + /[endpoint]
