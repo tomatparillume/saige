@@ -120,21 +120,37 @@ To call endpoints:
 The src/main/resources/parillume-keystore.jks was generated on 10/28/2024 on the command line:
 
 $ keytool -genkey -alias your-alias -keyalg RSA -keysize 2048 -keystore parillume-keystore.jks -validity 7300
+
 Enter keystore password:  LSFAbundance
+
 Re-enter new password: LSFAbundance
+
 What is your first and last name?
+
   [Unknown]:  Thomas Margolis
+
 What is the name of your organizational unit?
+
   [Unknown]:  Parillume
+
 What is the name of your organization?
+
   [Unknown]:  Parillume
+
 What is the name of your City or Locality?
+
   [Unknown]:  Boulder
+
 What is the name of your State or Province?
+
   [Unknown]:  Colorado
+
 What is the two-letter country code for this unit?
+
   [Unknown]:  US
+
 Is CN=Thomas Margolis, OU=Parillume, O=Parillume, L=Boulder, ST=Colorado, C=US correct?
+
   [no]:  yes
 
 Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 7,300 days
