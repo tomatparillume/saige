@@ -17,7 +17,7 @@ Sections in this README.md:
     (2)
     You will need parillume-0.0.1-SNAPSHOT-jar-with-dependencies.jar.
     If you don't know how to generate this *.jar file using Java: 
-        - In Google Drive > Parillume Software > SAIGE > SAIGE Program Resources, download the *.jar.
+        - In Google Drive > Parillume Software > SAIGE > SAIGE Java App Resources, download the *.jar.
 
     Create a base directory on your machine - e.g. Documents/Parillume/SomeDir. We'll call this the [base] directory.
     Put the *.jar file in a [base]/target directory - e.g. Documents/Parillume/SomeDir/target.
