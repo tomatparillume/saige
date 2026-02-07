@@ -95,7 +95,8 @@ To convert one-sheets to PNGs, so you can insert them in PowerPoints:
 
 =========== WEB APPLICATION IN A BROWSER =======================================
 
-The application must have access to a MySQL DB; see the spring.datasource.* parameters in saige/src/main/resources/application.properties file.
+The application must have access to a MySQL DB; Tom  uses MySQL Workbench on his Windows 11 laptop to host this DB.
+See the spring.datasource.* parameters in saige/src/main/resources/application.properties file.
 
 To start the application: 
     (1) Install Maven
