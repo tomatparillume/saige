@@ -58,26 +58,20 @@ public class BarGraphDataImporter {
             String rowErrorPrefix = "Row #"+(rowIndex+1);
             
             String barFileName = null;
+            
             // Bar widths for one or two bars; usually 960 or 576
             int[] barWidths = new int[2]; 
-            Integer barHeight = 60; // by default
             
             int[] barPercentages = new int[4];
             
-            // Seven cells: bar file name, bar width, bar height, and 4 bar percentages
-            for(int cellIndex = 0; cellIndex < 7; cellIndex++) {
+            // Six cells: bar file name, bar height(s), and 4 bar percentages
+            for(int cellIndex = 0; cellIndex < 6; cellIndex++) {
                 String cellErrorPrefix = rowErrorPrefix + ", cell #"+(cellIndex+1);
                 
                 Cell cell = row.getCell(cellIndex);
                 
-                if(cellIndex > 6) {
+                if(cellIndex > 5) {
                     break OUTER;   
-                    
-                } else if(cellIndex == 2 && // the barHeight cell
-                          (cell == null || CellType.BLANK == cell.getCellType())
-                        ) {
-                    // The barHeight cell is empty; we will use the default barHeight
-                    continue;
                 }
                 
                 if(CellType.STRING == cell.getCellType()) {
@@ -102,12 +96,9 @@ public class BarGraphDataImporter {
                             // Only one barWidth is defined
                             barWidths = new int[]{val};
                             break;
-                        case 2: 
-                            barHeight = val; 
-                            break;
                         default: 
-                            // cellIndex 3 is the first (0-index) barPercentage:
-                            barPercentages[cellIndex-3] = (int) cell.getNumericCellValue();
+                            // cellIndex 2 is the first (0-index) barPercentage:
+                            barPercentages[cellIndex-2] = (int) cell.getNumericCellValue();
                     }
                     
                 } else {
@@ -121,7 +112,7 @@ public class BarGraphDataImporter {
                 throw new Exception(rowErrorPrefix + ": Percentages do not sum to 100");
             
             barGraphData.add(
-                new BarGraphData(barFileName, barWidths, barHeight, barPercentages)
+                new BarGraphData(barFileName, barWidths, barPercentages)
             );
         }     
         

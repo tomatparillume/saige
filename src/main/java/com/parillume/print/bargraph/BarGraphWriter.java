@@ -67,6 +67,8 @@ public class BarGraphWriter {
 
     public int write(BarGraphData data, Map<Integer,Integer> barWidthToSortNum) throws Exception {
         for(int barWidth: data.getBarWidths()) {        
+      
+            int barHeight = BarGraphData.getBarHeight(barWidth);
             
             int section1Width = (int) Math.round(data.getBarPercentages()[0] / 100.0 * barWidth);
             int section2Width = (int) Math.round(data.getBarPercentages()[1] / 100.0 * barWidth);
@@ -74,14 +76,14 @@ public class BarGraphWriter {
             // Define final section's width using previous section widths:
             int section4Width = barWidth - (section1Width + section2Width + section3Width); 
             
-            BufferedImage image = new BufferedImage(barWidth, data.getBarHeight(), BufferedImage.TYPE_INT_ARGB);
+            BufferedImage image = new BufferedImage(barWidth, barHeight, BufferedImage.TYPE_INT_ARGB);
             Graphics2D g = image.createGraphics();
 
             ////// FILL BAR SECTIONS WITH COLOR
-            int section1X = fillSectionColor(g, section1Width, data.getBarHeight(), 0, 1);
-            int section2X = fillSectionColor(g, section2Width, data.getBarHeight(), section1X, 2);
-            int section3X = fillSectionColor(g, section3Width, data.getBarHeight(), section2X, 3);
-            int section4X = fillSectionColor(g, section4Width, data.getBarHeight(), section3X, 4);
+            int section1X = fillSectionColor(g, section1Width, barHeight, 0, 1);
+            int section2X = fillSectionColor(g, section2Width, barHeight, section1X, 2);
+            int section3X = fillSectionColor(g, section3Width, barHeight, section2X, 3);
+            int section4X = fillSectionColor(g, section4Width, barHeight, section3X, 4);
             
             ////// WRITE TEXT TO BAR SECTIONS
             Font font = FontUtil.load(FontUtil.AppFont.MONTSERRAT, 24f);
@@ -92,16 +94,16 @@ public class BarGraphWriter {
                                RenderingHints.VALUE_TEXT_ANTIALIAS_ON);            
         
             int unused_vertStagger = writePercentageText(g, data.getBarPercentages()[0], 0, 
-                                                  section1Width, data.getBarHeight(),
+                                                  section1Width, barHeight,
                                                   0);
             unused_vertStagger = writePercentageText(g, data.getBarPercentages()[1], section1X, 
-                                              section2Width, data.getBarHeight(),
+                                              section2Width, barHeight,
                                               unused_vertStagger);
             unused_vertStagger = writePercentageText(g, data.getBarPercentages()[2], section2X, 
-                                              section3Width, data.getBarHeight(),
+                                              section3Width, barHeight,
                                               unused_vertStagger);
             unused_vertStagger = writePercentageText(g, data.getBarPercentages()[3], section3X, 
-                                              section4Width, data.getBarHeight(),
+                                              section4Width, barHeight,
                                               unused_vertStagger);
             
             g.dispose();

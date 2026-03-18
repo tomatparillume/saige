@@ -17,13 +17,18 @@ public class BarGraphData {
     
     private String barFileName; 
     private int[] barWidths; // multiple widths generates multiple bars
-    private int barHeight;
     private int[] barPercentages = null;
     
-    public BarGraphData(String barFileName, int[] barWidths, int barHeight, int[] barPercentages) {
+    public BarGraphData(String barFileName, int[] barWidths, int[] barPercentages) {
         setBarFileName(barFileName);
         setBarWidths(barWidths);
-        setBarHeight(barHeight);
         setBarPercentages(barPercentages);
+    }
+    
+    public static int getBarHeight(int barWidth) {
+        // Standard bar widths are 576 and 960
+        return barWidth < 600 ? 
+                60: // For bar width 576 
+                67;  // For bar width 960
     }
 }
