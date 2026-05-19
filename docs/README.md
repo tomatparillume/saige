@@ -60,7 +60,7 @@ Sections in this README.md:
 
 To convert one-sheets to PNGs, so you can insert them in PowerPoints:
 
-        Put the PNGs that you want to convert in the [base]/tmp/ directory.
+        Put the PDFs that you want to convert in the [base]/tmp/ directory.
 
 	Open a terminal window (or a "command" window) and type:  cd [path/to/base directory] - e.g. cd Documents/Parillume/SomeDir
 
