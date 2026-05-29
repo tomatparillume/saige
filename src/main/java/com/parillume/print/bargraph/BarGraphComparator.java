@@ -1,10 +1,8 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Copyright(c) 2024 Parillume, All rights reserved worldwide
  */
 package com.parillume.print.bargraph;
 
-import java.util.Arrays;
 import java.util.Comparator;
 
 /**
