@@ -1,5 +1,5 @@
 /*
- * Copyright(c) 2024, Billtrust Inc., All rights reserved worldwide
+ * Copyright(c) 2024, Parillume, All rights reserved worldwide
  */
 package com.parillume.log;
 
