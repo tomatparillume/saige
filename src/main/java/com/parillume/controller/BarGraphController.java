@@ -33,6 +33,7 @@ public class BarGraphController {
             System.out.println("*** Wrote " + count + " bar graphs ***");
             
         } catch(Exception exc) {
+            exc.printStackTrace();
             System.out.println("************* ERROR *************\n" + exc.getMessage());
             try {
                 FileUtil.writeToErrorFile(exc.getMessage(), false);

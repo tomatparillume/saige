@@ -70,7 +70,7 @@ public class BarGraphDataImporter {
                 
                 Cell cell = row.getCell(cellIndex);
                 
-                if(cellIndex > 5) {
+                if(cell == null || cellIndex > 5) {
                     break OUTER;   
                 }
                 
